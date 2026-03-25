@@ -10,8 +10,7 @@ export default function Layout() {
             </main>
             <footer className="text-center py-6 bg-gray-900 text-gray-400 border-t border-gray-700">
                 <div className="max-w-6xl mx-auto px-4">
-                    <p>© 2026 Ishika. All rights reserved.</p>
-                    <p className="text-sm mt-2">Inspired by Persona 4 Golden ✨</p>
+                    <p>© 2026 Ishika</p>
                 </div>
             </footer>
         </div>
