@@ -1,9 +1,10 @@
 import ProjectDetail from "../../components/ProjectDetail";
+import { images } from "../../utils/images";
 
 export default function Trippie() {
     const project = {
         title: "Trippie",
-        image: "/src/images/Trippie.png",
+        image: images.projects.trippie.main,
         live: "https://project.cmi.hr.nl/2024_2025/cle3_t10/trippie/",
         github: "https://github.com/Chrisieee/trippie",
         description: (
@@ -133,35 +134,35 @@ export default function Trippie() {
             </>
         ),
         techStack: [
-            { name: "HTML", icon: "/src/images/tech/html.png" },
-            { name: "CSS", icon: "/src/images/tech/css.png" },
-            { name: "JavaScript", icon: "/src/images/tech/javascript.png" },
-            { name: "Google Maps API", icon: "/src/images/tech/googlemaps.png" },
-            { name: "NS API", icon: "/src/images/tech/ns.png" }
+            { name: "HTML5", icon: images.tech.html },
+            { name: "CSS3", icon: images.tech.css },
+            { name: "JavaScript", icon: images.tech.javascript },
+            { name: "Google Maps API", icon: images.tech.googlemaps }
         ],
         tools: [
-            { name: "phpStorm", icon: "/src/images/tech/phpstorm.png" },
-            { name: "GitHub", icon: "/src/images/tech/github.png" },
-            { name: "Git", icon: "/src/images/tech/git.png" },
+            { name: "VS Code", icon: images.tech.vscode },
+            { name: "GitHub", icon: images.tech.github },
+            { name: "Git", icon: images.tech.git },
+            { name: "Figma", icon: images.tech.figma }
         ],
         additionalImages: [
             {
-                src: "/src/images/TrippieView.png",
+                src: images.projects.trippie.view,
                 alt: "A page of all the trips",
                 caption: "The page where you can see all your planned trips and click on them to see the details"
             },
             {
-                src: "/src/images/TrippieValidation.png",
+                src: images.projects.trippie.validation,
                 alt: "Validation message when field is empty",
                 caption: "The app shows a message when you forget to fill something in"
             },
             {
-                src: "/src/images/TrippieMap.png",
+                src: images.projects.trippie.map,
                 alt: "Google Maps with route",
                 caption: "The route map with zoom buttons"
             },
             {
-                src: "/src/images/TrippieAutocomplete.png",
+                src: images.projects.trippie.autocomplete,
                 alt: "AutoComplete function with bold letters",
                 caption: "AutoComplete makes the letters bold when you type"
             }

@@ -1,53 +1,54 @@
 import { FadeInSection, FadeInLeft, FadeInRight, FadeInScale } from "../components/Animations";
+import { images } from '../utils/images';
 
 export default function Learnings() {
     const skills = [
         {
             name: "HTML & CSS",
             description: "Responsive layout and modern web design",
-            icon: "/src/images/tech/html-css.png",
+            icon: images.tech.html,
             level: "Advanced"
         },
         {
             name: "PHP",
             description: "Backend development basics",
-            icon: "/src/images/tech/php.png",
+            icon: images.tech.php,
             level: "Intermediate"
         },
         {
             name: "Laravel / Herd",
             description: "Framework structure and backend architecture",
-            icon: "/src/images/tech/laravel.png",
+            icon: images.tech.laravel,
             level: "Intermediate"
         },
         {
             name: "JavaScript",
             description: "Building interactive web applications",
-            icon: "/src/images/tech/javascript.png",
+            icon: images.tech.javascript,
             level: "Growing"
         },
         {
             name: "Game Development",
             description: "Excalibur engine and game mechanics",
-            icon: "/src/images/tech/excalibur.png",
+            icon: images.tech.excalibur,
             level: "Beginner"
         },
         {
             name: "UI/UX Design",
             description: "Wireframing and prototyping in Figma",
-            icon: "/src/images/tech/figma.png",
+            icon: images.tech.figma,
             level: "Intermediate"
         },
         {
             name: "Web & Graphic Design",
             description: "Creating visuals with Canva",
-            icon: "/src/images/tech/canva.png",
+            icon: images.tech.canva,
             level: "Intermediate"
         },
         {
             name: "Git & GitHub",
             description: "Version control and collaboration",
-            icon: "/src/images/tech/github.png",
+            icon: images.tech.git,
             level: "Intermediate"
         }
     ];

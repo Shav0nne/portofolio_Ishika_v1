@@ -1,9 +1,10 @@
 import ProjectDetail from "../../components/ProjectDetail";
+import { images } from "../../utils/images";
 
 export default function TheBizzareKriboAdventure() {
     const project = {
         title: "The Bizarre Kribo Adventure",
-        image: "/src/images/TheBizzareKriboAdventureGuide.png",
+        image: images.projects.kribo.guide,
         live: "https://shav0nne.github.io/The_Bizzare_Kribo_Adventure/",
         github: "https://github.com/Shav0nne/The_Bizzare_Kribo_Adventure",
         description: (
@@ -54,22 +55,22 @@ export default function TheBizzareKriboAdventure() {
             </>
         ),
         techStack: [
-            { name: "JavaScript", icon: "/src/images/tech/javascript.png" },
-            { name: "Excalibur", icon: "/src/images/tech/excalibur.png" }
+            { name: "JavaScript", icon: images.tech.javascript },
+            { name: "Excalibur", icon: images.tech.excalibur }
         ],
         tools: [
-            { name: "VS Code", icon: "/src/images/tech/vscode.png" },
-            { name: "GitHub", icon: "/src/images/tech/github.png" },
-            { name: "Git", icon: "/src/images/tech/git.png" }
+            { name: "VS Code", icon: images.tech.vscode },
+            { name: "GitHub", icon: images.tech.github },
+            { name: "Git", icon: images.tech.git }
         ],
         additionalImages: [
             {
-                src: "/src/images/KriboArtDesign.jpeg",
+                src: images.projects.kribo.art,
                 alt: "Designs for the game character Kribo",
                 caption: "Character designs"
             },
             {
-                src: "/src/images/ScreenshotKriboGame.png",
+                src: images.projects.kribo.screenshot,
                 alt: "Screenshot of the game showing the main character Kribo in action",
                 caption: "In-game screenshot"
             }

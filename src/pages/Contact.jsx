@@ -1,4 +1,5 @@
 import { FadeInSection, FadeInScale } from "../components/Animations";
+import { images } from '../utils/images';
 
 export default function Contact() {
     return (
@@ -22,7 +23,7 @@ export default function Contact() {
                        className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 text-center group flex flex-col items-center h-full">
                         <div className="flex justify-center mb-4">
                             <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                                <img src="/src/images/tech/linkin.png" alt="LinkedIn"
+                                <img src={images.tech.linkin} alt="LinkedIn"
                                      className="w-12 h-12 object-contain"
                                      onError={(e) => {
                                          e.target.src = "https://via.placeholder.com/48?text=IN";
@@ -44,7 +45,7 @@ export default function Contact() {
                        className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 text-center group flex flex-col items-center h-full">
                         <div className="flex justify-center mb-4">
                             <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                                <img src="/src/images/tech/github.png" alt="GitHub" className="w-12 h-12 object-contain"
+                                <img src={images.tech.github} alt="GitHub" className="w-12 h-12 object-contain"
                                      onError={(e) => {e.target.src = "https://via.placeholder.com/48?text=GH";}}
                                 />
                             </div>
@@ -63,7 +64,7 @@ export default function Contact() {
                        className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 text-center group flex flex-col items-center h-full">
                         <div className="flex justify-center mb-4">
                             <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                                <img src="/src/images/tech/gmail.png" alt="Email" className="w-12 h-12 object-contain"
+                                <img src={images.tech.gmail} alt="Email" className="w-12 h-12 object-contain"
                                      onError={(e) => {
                                          e.target.src = "https://via.placeholder.com/48?text=@";
                                      }}

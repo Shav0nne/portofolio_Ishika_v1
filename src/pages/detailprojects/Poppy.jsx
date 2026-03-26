@@ -1,9 +1,10 @@
 import ProjectDetail from "../../components/ProjectDetail";
+import { images } from "../../utils/images";
 
 export default function Poppy() {
     const project = {
         title: "Poppy",
-        image: "/src/images/Poppy.png",
+        image: images.projects.poppy.main,
         live: "http://145.24.237.244",
         github: "https://github.com/Shav0nne/sonarpoppy",
         description: (
@@ -87,25 +88,25 @@ export default function Poppy() {
             </>
         ),
         techStack: [
-            { name: "Express.js", icon: "/src/images/tech/express.png" },
-            { name: "MongoDB", icon: "/src/images/tech/mongodb.png" },
-            { name: "JavaScript", icon: "/src/images/tech/javascript.png" },
-            { name: "Node.js", icon: "/src/images/tech/nodejs.png" }
+            { name: "Express.js", icon: images.tech.express },
+            { name: "MongoDB", icon: images.tech.mongodb },
+            { name: "JavaScript", icon: images.tech.javascript },
+            { name: "Node.js", icon: images.tech.nodejs }
         ],
         tools: [
-            { name: "PhpStorm", icon: "/src/images/tech/phpstorm.png" },
-            { name: "GitHub", icon: "/src/images/tech/github.png" },
-            { name: "Git", icon: "/src/images/tech/git.png" },
-            { name: "Postman", icon: "/src/images/tech/postman.png" }
+            { name: "VS Code", icon: images.tech.vscode },
+            { name: "GitHub", icon: images.tech.github },
+            { name: "Git", icon: images.tech.git },
+            { name: "Postman", icon: images.tech.postman }
         ],
         additionalImages: [
             {
-                src: "/src/images/PoppyERD.jpg",
+                src: images.projects.poppy.erd,
                 alt: "ERD diagram for database",
                 caption: "ERD diagram I helped design for the database"
             },
             {
-                src: "/src/images/PoppyFriendSystem.png",
+                src: images.projects.poppy.friend,
                 alt: "Friend system interface",
                 caption: "Friend system with requests"
             }

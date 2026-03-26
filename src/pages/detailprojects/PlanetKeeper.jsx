@@ -1,9 +1,10 @@
 import ProjectDetail from "../../components/ProjectDetail";
+import { images } from "../../utils/images";
 
 export default function PlanetKeeper() {
     const project = {
         title: "Planet Keeper",
-        image: "/src/images/ScreenshotPlanetKeeper.png",
+        image: images.projects.planetKeeper.screenshot,
         live: "https://planet-keeper.itch.io/planet-keeper",
         github: "https://github.com/dingoskye/planetkeeper",
         description: (
@@ -103,23 +104,25 @@ export default function PlanetKeeper() {
             </>
         ),
         techStack: [
-            { name: "JavaScript", icon: "/src/images/tech/javascript.png" },
-            { name: "Excalibur", icon: "/src/images/tech/excalibur.png" },
+            { name: "JavaScript", icon: images.tech.javascript },
+            { name: "Excalibur", icon: images.tech.excalibur },
+            { name: "HTML", icon: images.tech.html },
+            { name: "CSS", icon: images.tech.css }
         ],
         tools: [
-            { name: "VS Code", icon: "/src/images/tech/vscode.png" },
-            { name: "GitHub", icon: "/src/images/tech/github.png" },
-            { name: "Git", icon: "/src/images/tech/git.png" },
-            { name: "Ibis Paint", icon: "/src/images/tech/ibispaint.png" },
+            { name: "VS Code", icon: images.tech.vscode },
+            { name: "GitHub", icon: images.tech.github },
+            { name: "Git", icon: images.tech.git },
+            { name: "Ibis Paint", icon: images.tech.ibispaint },
         ],
         additionalImages: [
             {
-                src: "/src/images/PlanetKeeperUI.jpeg",
+                src: images.projects.planetKeeper.ui,
                 alt: "UI visuals - faces, gold bars, buttons",
                 caption: "The visuals I drew for the game."
             },
             {
-                src: "/src/images/PlanetKeeperGameplay.png",
+                src: images.projects.planetKeeper.gameplay,
                 alt: "Gameplay screenshot showing the pointer and dilemma text",
                 caption: "Gameplay screenshot showing the pointer and dilemma text."
             }

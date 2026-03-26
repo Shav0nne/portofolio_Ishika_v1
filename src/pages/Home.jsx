@@ -1,3 +1,4 @@
+import { images } from '../utils/images';
 import { FadeInSection, FadeInLeft, FadeInRight, FadeInScale, floatAnimation } from "../components/Animations";
 
 export default function Home() {
@@ -36,9 +37,7 @@ export default function Home() {
                                         flex items-center justify-center shadow-2xl border-4 border-yellow-400
                                         hover:scale-110 transition-transform duration-300 cursor-pointer">
                             <div className="w-72 h-72 rounded-full overflow-hidden bg-gray-700">
-                                <img
-                                    src="/src/images/ProfilePicture.jpeg"
-                                    alt="Profile"
+                                <img src={images.profile} alt="Profile"
                                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                                 />
                             </div>
@@ -118,7 +117,7 @@ export default function Home() {
                                target="_blank" rel="noopener noreferrer"
                                className="flex items-center justify-between p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-all group">
                                 <div className="flex items-center space-x-4">
-                                    <img src="/src/images/tech/linkin.png" alt="LinkedIn" className="w-8 h-8 object-contain"/>
+                                    <img src={images.tech.linkin} alt="LinkedIn" className="w-8 h-8 object-contain"/>
                                     <span className="text-white font-medium">LinkedIn</span>
                                 </div>
                                 <span className="text-gray-400 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all">→</span>
@@ -129,7 +128,7 @@ export default function Home() {
                                 href="https://github.com/Shav0nne" target="_blank" rel="noopener noreferrer"
                                 className="flex items-center justify-between p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-all group">
                                 <div className="flex items-center space-x-4">
-                                    <img src="/src/images/tech/github.png" alt="GitHub" className="w-8 h-8 object-contain"/>
+                                    <img src={images.tech.github} alt="GitHub" className="w-8 h-8 object-contain"/>
                                     <span className="text-white font-medium">GitHub</span>
                                 </div>
                                 <span className="text-gray-400 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all">→</span>
@@ -140,7 +139,7 @@ export default function Home() {
                                 href="mailto:esoebhag@gmail.com"
                                 className="flex items-center justify-between p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-all group">
                                 <div className="flex items-center space-x-4">
-                                    <img src="/src/images/tech/gmail.png" alt="Email" className="w-8 h-8 object-contain"/>
+                                    <img src={images.tech.gmail} alt="Email" className="w-8 h-8 object-contain"/>
                                     <span className="text-white font-medium">Email</span>
                                 </div>
                                 <span className="text-gray-400 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all">→</span>

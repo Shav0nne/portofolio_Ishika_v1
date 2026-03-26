@@ -1,9 +1,10 @@
 import ProjectDetail from "../../components/ProjectDetail";
+import { images } from "../../utils/images";
 
 export default function KingdomHeartsGuide() {
     const project = {
         title: "Kingdom Hearts Guide Website",
-        image: "/src/images/KingdomHeartsGuide.png",
+        image: images.projects.kingdomHearts.guide,
         live: "https://github.com/Shav0nne/kingdom-hearts-guides",
         github: "https://github.com/Shav0nne/kingdom-hearts-guides",
         description: (
@@ -51,20 +52,20 @@ export default function KingdomHeartsGuide() {
             </>
         ),
         techStack: [
-            { name: "Laravel", icon: "/src/images/tech/laravel.png" },
-            { name: "PHP", icon: "/src/images/tech/php.png" },
-            { name: "HTML", icon: "/src/images/tech/html.png" },
-            { name: "SQLite", icon: "/src/images/tech/sqlite.png" }
+            { name: "Laravel", icon: images.tech.laravel },
+            { name: "PHP", icon: images.tech.php },
+            { name: "HTML", icon: images.tech.html },
+            { name: "SQLite", icon: images.tech.sqlite }
         ],
         tools: [
-            { name: "PphStorm", icon: "/src/images/tech/phpstorm.png" },
-            { name: "GitHub", icon: "/src/images/tech/github.png" },
-            { name: "Git", icon: "/src/images/tech/git.png" },
-            { name: "Laravel Herd", icon: "/src/images/tech/herd.png" }
+            { name: "VS Code", icon: images.tech.vscode },
+            { name: "GitHub", icon: images.tech.github },
+            { name: "Git", icon: images.tech.git },
+            { name: "Laravel Herd", icon: images.tech.herd }
         ],
         additionalImages: [
             {
-                src: "/src/images/KhComment.png",
+                src: images.projects.kingdomHearts.comment,
                 alt: "Screenshot of user comments section on the guide website",
                 caption: "User comments section for guide feedback and discussion"
             }

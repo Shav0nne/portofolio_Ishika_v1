@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { images } from "../utils/images";
 import { FadeInSection, FadeInScale } from "../components/Animations";
 
 export default function Projects() {
@@ -7,35 +8,35 @@ export default function Projects() {
             id: "the-bizarre-kribo-adventure",
             title: "The Bizarre Kribo Adventure",
             description: "A hard platform game where you need to be careful and keep trying. Every jump matters!",
-            image: "/src/images/ScreenshotKriboGame.png",
+            image: images.projects.kribo.screenshot,
             live: "https://shav0nne.github.io/The_Bizzare_Kribo_Adventure/"
         },
         {
             id: "planet-keeper",
             title: "Planet Keeper",
             description: "A team project about taking care of the environment. Make choices that help your planet.",
-            image: "/src/images/ScreenshotPlanetKeeper.png",
+            image: images.projects.planetKeeper.screenshot,
             live: "https://planet-keeper.itch.io/planet-keeper"
         },
         {
             id: "kingdom-hearts-guide",
             title: "Kingdom Hearts Guide Website",
             description: "A guide website with tips for Kingdom Hearts. Learn about forms, bosses, and enemies.",
-            image: "/src/images/KingdomHeartsGuide.png",
+            image: images.projects.kingdomHearts.guide,
             live: "https://github.com/Shav0nne/kingdom-hearts-guides"
         },
         {
             id: "poppy",
             title: "Poppy",
             description: "A music app with AI that recommends songs. Made with Express.js and MongoDB.",
-            image: "/src/images/Poppy.png",
+            image: images.projects.poppy.main,
             live: "http://145.24.237.244"
         },
         {
             id: "trippie",
             title: "Trippie",
             description: "A travel app that helps people use public transport. Made for people who need extra help.",
-            image: "/src/images/Trippie.png",
+            image: images.projects.trippie.main,
             live: "https://project.cmi.hr.nl/2024_2025/cle3_t10/trippie/"
         }
     ];
