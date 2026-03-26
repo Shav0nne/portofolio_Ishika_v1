@@ -17,9 +17,9 @@ export default function Contact() {
                     className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 text-center group">
                     <div className="flex justify-center mb-4">
                         <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                            <img src="/src/images/linkedin-logo.png" alt="LinkedIn"
-                                className="w-12 h-12 object-contain"
-                                onError={(e) => {
+                            <img src="/src/images/tech/linkin.png" alt="LinkedIn"
+                                 className="w-12 h-12 object-contain"
+                                 onError={(e) => {
                                     e.target.src = "https://via.placeholder.com/48?text=IN";
                                 }}
                             />
@@ -37,8 +37,8 @@ export default function Contact() {
                     className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 text-center group">
                     <div className="flex justify-center mb-4">
                         <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                            <img src="/src/images/GitHub-logo.png" alt="GitHub" className="w-12 h-12 object-contain"
-                                onError={(e) => {e.target.src = "https://via.placeholder.com/48?text=GH";}}
+                            <img src="/src/images/tech/github.png" alt="GitHub" className="w-12 h-12 object-contain"
+                                 onError={(e) => {e.target.src = "https://via.placeholder.com/48?text=GH";}}
                             />
                         </div>
                     </div>
@@ -54,8 +54,8 @@ export default function Contact() {
                     className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 text-center group">
                     <div className="flex justify-center mb-4">
                         <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                            <img src="/src/images/gmail-logo.png" alt="Email" className="w-12 h-12 object-contain"
-                                onError={(e) => {
+                            <img src="/src/images/tech/gmail.png" alt="Email" className="w-12 h-12 object-contain"
+                                 onError={(e) => {
                                     e.target.src = "https://via.placeholder.com/48?text=@";
                                 }}
                             />

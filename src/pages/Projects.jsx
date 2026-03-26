@@ -50,8 +50,7 @@ export default function Projects() {
                         {/* Project Image */}
                         <div className="h-48 bg-gray-700 relative">
                             <img src={project.image} alt={project.title} className="w-full h-full object-cover" onError={(e) => {
-                                    e.target.src = "/";}}
-                            />
+                                    e.target.src = "/";}}/>
                         </div>
 
                         {/* Project Content */}

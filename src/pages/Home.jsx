@@ -102,7 +102,7 @@ export default function Home() {
                             target="_blank" rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-all group">
                             <div className="flex items-center space-x-4">
-                                <img src="/src/images/linkedin-logo.png" alt="LinkedIn" className="w-8 h-8 object-contain"/>
+                                <img src="/src/images/tech/linkin.png" alt="LinkedIn" className="w-8 h-8 object-contain"/>
                                 <span className="text-white font-medium">LinkedIn</span>
                             </div>
                             <span className="text-gray-400 group-hover:text-yellow-400 transition-colors">→</span>
@@ -113,7 +113,7 @@ export default function Home() {
                             href="https://github.com/Shav0nne" target="_blank" rel="noopener noreferrer"
                             className="flex items-center justify-between p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-all group">
                             <div className="flex items-center space-x-4">
-                                <img src="/src/images/github-logo.png" alt="GitHub" className="w-8 h-8 object-contain"/>
+                                <img src="/src/images/tech/github.png" alt="GitHub" className="w-8 h-8 object-contain"/>
                                 <span className="text-white font-medium">GitHub</span>
                             </div>
                             <span className="text-gray-400 group-hover:text-yellow-400 transition-colors">→</span>
@@ -124,7 +124,7 @@ export default function Home() {
                             href="mailto:esoebhag@gmail.com"
                             className="flex items-center justify-between p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-all group">
                             <div className="flex items-center space-x-4">
-                                <img src="/src/images/gmail-logo.png" alt="Email" className="w-8 h-8 object-contain"/>
+                                <img src="/src/images/tech/gmail.png" alt="Email" className="w-8 h-8 object-contain"/>
                                 <span className="text-white font-medium">Email</span>
                             </div>
                             <span className="text-gray-400 group-hover:text-yellow-400 transition-colors">→</span>
