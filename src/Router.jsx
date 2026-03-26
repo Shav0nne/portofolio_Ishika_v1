@@ -6,7 +6,7 @@ import TheBizzareKriboAdventure from "./pages/detailprojects/TheBizzareKriboAdve
 import PlanetKeeper from "./pages/detailprojects/PlanetKeeper";
 import KingdomHeartsGuide from "./pages/detailprojects/KingdomHeartsGuide";
 import Poppy from "./pages/detailprojects/Poppy";
-// import Trippie from "./pages/detailprojects/Trippie";
+import Trippie from "./pages/detailprojects/Trippie";
 import Learnings from "./pages/Learnings";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             { path: "projects/planet-keeper", element: <PlanetKeeper /> },
             { path: "projects/kingdom-hearts-guide", element: <KingdomHeartsGuide /> },
             { path: "projects/poppy", element: <Poppy /> },
-            // { path: "projects/trippie", element: <Trippie /> },
+            { path: "projects/trippie", element: <Trippie /> },
             { path: "learnings", element: <Learnings /> },
             { path: "contact", element: <Contact /> },
         ],

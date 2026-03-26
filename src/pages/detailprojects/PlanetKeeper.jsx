@@ -5,7 +5,7 @@ export default function PlanetKeeper() {
         title: "Planet Keeper",
         image: "/src/images/ScreenshotPlanetKeeper.png",
         live: "https://planet-keeper.itch.io/planet-keeper",
-        github: "https://github.com/yourusername/planet-keeper",
+        github: "https://github.com/dingoskye/planetkeeper",
         description: (
             <>
                 <p>

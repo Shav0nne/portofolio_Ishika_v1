@@ -5,7 +5,7 @@ export default function Poppy() {
         title: "Poppy",
         image: "/src/images/Poppy.png",
         live: "http://145.24.237.244",
-        github: "https://github.com/yourusername/poppy",
+        github: "https://github.com/Shav0nne/sonarpoppy",
         description: (
             <>
                 <p>
