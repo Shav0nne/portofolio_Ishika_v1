@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FadeInSection, FadeInScale } from "../components/Animations";
 
 export default function Projects() {
     const projects = [
@@ -41,49 +42,43 @@ export default function Projects() {
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold text-yellow-400 mb-4">Projects</h1>
-            <p className="text-gray-300 mb-12 text-lg">My projects!</p>
+            <FadeInSection delay={100}>
+                <h1 className="text-4xl font-bold text-yellow-400 mb-4">Projects</h1>
+                <p className="text-gray-300 mb-12 text-lg">My projects!</p>
+            </FadeInSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projects.map((project) => (
-                    <div key={project.id} className="bg-gray-800 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                        {/* Project Image */}
-                        <div className="h-48 bg-gray-700 relative">
-                            <img src={project.image} alt={project.title} className="w-full h-full object-cover" onError={(e) => {
-                                    e.target.src = "/";}}/>
-                        </div>
+                {projects.map((project, index) => (
+                    <FadeInScale key={project.id} delay={200 + (index * 100)}>
+                        <div className="bg-gray-800 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                            {/* Project Image */}
+                            <div className="h-48 bg-gray-700 relative">
+                                <img src={project.image} alt={project.title} className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        e.target.src = "/";}}/>
+                            </div>
 
-                        {/* Project Content */}
-                        <div className="p-6">
-                            <h2 className="text-2xl font-bold text-yellow-400 mb-2">{project.title}</h2>
-                            <p className="text-gray-300 mb-4">{project.description}</p>
+                            {/* Project Content */}
+                            <div className="p-6">
+                                <h2 className="text-2xl font-bold text-yellow-400 mb-2">{project.title}</h2>
+                                <p className="text-gray-300 mb-4">{project.description}</p>
 
-                            {/* Project specific details */}
-                            {project.score !== undefined && (
-                                <p className="text-gray-400 mb-2">Score: {project.score}</p>
-                            )}
-                            {project.phase && (
-                                <p className="text-gray-400 mb-2">Phase: {project.phase}</p>
-                            )}
-                            {project.progress && (
-                                <p className="text-gray-400 mb-2">Progress: {project.progress}</p>
-                            )}
-
-                            {/* buttons */}
-                            <div className="flex gap-4 mt-4">
-                                <Link to={`/projects/${project.id}`}
-                                    className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                                    Details
-                                </Link>
-                                {project.live && (
-                                    <a href={project.live} target="_blank" rel="noopener noreferrer"
-                                        className="bg-gray-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
-                                        Live
-                                    </a>
-                                )}
+                                {/* buttons */}
+                                <div className="flex gap-4 mt-4">
+                                    <Link to={`/projects/${project.id}`}
+                                        className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                                        Details
+                                    </Link>
+                                    {project.live && (
+                                        <a href={project.live} target="_blank" rel="noopener noreferrer"
+                                            className="bg-gray-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
+                                            Live
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </FadeInScale>
                 ))}
             </div>
         </div>

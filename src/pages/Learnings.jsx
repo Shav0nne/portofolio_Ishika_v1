@@ -1,3 +1,5 @@
+import { FadeInSection, FadeInLeft, FadeInRight, FadeInScale } from "../components/Animations";
+
 export default function Learnings() {
     const skills = [
         {
@@ -79,65 +81,79 @@ export default function Learnings() {
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold text-yellow-400 mb-4">What have I learned</h1>
-            <p className="text-gray-300 mb-12 text-lg">My journey through technology and development</p>
+            <FadeInSection delay={100}>
+                <h1 className="text-4xl font-bold text-yellow-400 mb-4">What have I learned</h1>
+                <p className="text-gray-300 mb-12 text-lg">My journey through technology and development</p>
+            </FadeInSection>
 
             {/* Technical skills grid */}
             <div className="mb-16">
-                <h2 className="text-2xl font-bold text-yellow-400 mb-6">Technical Skills</h2>
+                <FadeInLeft delay={200}>
+                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">Technical Skills</h2>
+                </FadeInLeft>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {skills.map((skill, index) => (
-                        <div key={index} className="bg-gray-800 rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
-                            <div className="flex justify-center mb-4">
-                                <div className="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center">
-                                    <img src={skill.icon} alt={skill.name} className="w-12 h-12 object-contain"
-                                        onError={(e) => {
-                                            e.target.src = "https://via.placeholder.com/48?text=Logo";}}/>
+                        <FadeInScale key={index} delay={300 + (index * 50)}>
+                            <div className="bg-gray-800 rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                                <div className="flex justify-center mb-4">
+                                    <div className="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center">
+                                        <img src={skill.icon} alt={skill.name} className="w-12 h-12 object-contain"
+                                             onError={(e) => {
+                                                 e.target.src = "https://via.placeholder.com/48?text=Logo";}}/>
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-semibold text-yellow-400 text-center mb-2">{skill.name}</h3>
+                                <p className="text-gray-400 text-sm text-center mb-2">{skill.description}</p>
+                                <div className="mt-3 text-center">
+                                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium
+                                        ${skill.level === 'Advanced' ? 'bg-green-900 text-green-300' :
+                                        skill.level === 'Proficient' ? 'bg-blue-900 text-blue-300' :
+                                            skill.level === 'Intermediate' ? 'bg-yellow-900 text-yellow-300' :
+                                                skill.level === 'Growing' ? 'bg-purple-900 text-purple-300' :
+                                                    'bg-gray-700 text-gray-300'}`}>
+                                        {skill.level}
+                                    </span>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-semibold text-yellow-400 text-center mb-2">{skill.name}</h3>
-                            <p className="text-gray-400 text-sm text-center mb-2">{skill.description}</p>
-                            <div className="mt-3 text-center">
-                                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium
-                                    ${skill.level === 'Advanced' ? 'bg-green-900 text-green-300' :
-                                    skill.level === 'Proficient' ? 'bg-blue-900 text-blue-300' :
-                                        skill.level === 'Intermediate' ? 'bg-yellow-900 text-yellow-300' :
-                                            skill.level === 'Growing' ? 'bg-purple-900 text-purple-300' :
-                                                'bg-gray-700 text-gray-300'}`}>
-                                    {skill.level}
-                                </span>
-                            </div>
-                        </div>
+                        </FadeInScale>
                     ))}
                 </div>
             </div>
 
-            {/* Soft Skills */}
+            {/* Soft skills */}
             <div className="mb-16">
-                <h2 className="text-2xl font-bold text-yellow-400 mb-6">Soft Skills & Qualities</h2>
-                <div className="bg-gray-800 rounded-2xl p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {softSkills.map((skill, index) => (
-                            <div key={index} className="flex items-center space-x-3">
-                                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                </svg>
-                                <span className="text-gray-300">{skill}</span>
-                            </div>
-                        ))}
+                <FadeInRight delay={400}>
+                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">Soft Skills & Qualities</h2>
+                </FadeInRight>
+                <FadeInScale delay={500}>
+                    <div className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {softSkills.map((skill, index) => (
+                                <div key={index} className="flex items-center space-x-3">
+                                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    <span className="text-gray-300">{skill}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </FadeInScale>
             </div>
 
-            {/* Personal Learning Goals */}
+            {/* Personal learning goals */}
             <div>
-                <h2 className="text-2xl font-bold text-yellow-400 mb-6">My Learning Goals</h2>
+                <FadeInLeft delay={600}>
+                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">My Learning Goals</h2>
+                </FadeInLeft>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {learningGoals.map((goal, index) => (
-                        <div key={index} className="bg-gray-800 rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
-                            <h3 className="text-xl font-semibold text-yellow-400 mb-3">{goal.title}</h3>
-                            <p className="text-gray-300 leading-relaxed">{goal.description}</p>
-                        </div>
+                        <FadeInScale key={index} delay={700 + (index * 100)}>
+                            <div className="bg-gray-800 rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                                <h3 className="text-xl font-semibold text-yellow-400 mb-3">{goal.title}</h3>
+                                <p className="text-gray-300 leading-relaxed">{goal.description}</p>
+                            </div>
+                        </FadeInScale>
                     ))}
                 </div>
             </div>
