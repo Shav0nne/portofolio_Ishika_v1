@@ -2,51 +2,54 @@ import ProjectDetail from "../../components/ProjectDetail";
 
 export default function TheBizzareKriboAdventure() {
     const project = {
-        title: "Game - The Bizarre Kribo Adventure",
+        title: "The Bizarre Kribo Adventure",
         image: "/src/images/TheBizzareKriboAdventureGuide.png",
         live: "https://shav0nne.github.io/The_Bizzare_Kribo_Adventure/",
         github: "https://github.com/Shav0nne/The_Bizzare_Kribo_Adventure",
         description: (
             <>
                 <p>
-                    The Bizarre Kribo Adventure is a chaotic rage platformer where precision,
-                    patience, and persistence are constantly put to the test. What starts as a
-                    colorful and playful journey quickly turns into a psychological challenge
-                    filled with unpredictable hazards and unforgiving mechanics.
+                    The Bizarre Kribo Adventure is a hard platform game where you need to be
+                    careful and try again many times. The game starts colorful and fun, but
+                    it gets harder as you play. There are traps and surprises that make you
+                    think fast.
                 </p>
                 <p>
-                    Players control Kribo through increasingly hostile environments where every
-                    jump matters and every mistake is punished. From hidden dangers to enemies
-                    that defy expectations, the game is designed to keep players on edge and
-                    push them to adapt, retry, and overcome.
+                    You play as Kribo and move through levels where every jump is important.
+                    If you make a mistake, you have to start over. There are hidden dangers
+                    and enemies that you don't expect. The game wants you to keep trying and
+                    get better each time.
                 </p>
                 <p>
-                    Beyond its difficulty, the game explores themes of anxiety, illusion, and
-                    inner struggle. As players progress, the world becomes more distorted,
-                    blending gameplay with narrative elements that reflect Kribo’s descent into
-                    a cursed and unsettling reality.
+                    The game is not just about being hard. It also tells a story about feeling
+                    worried and facing problems. As you go further, the world changes and looks
+                    strange. The story and gameplay work together to show Kribo's journey into
+                    a scary and confusing world.
                 </p>
             </>
         ),
         development: (
             <>
                 <p>
-                    For this project, I used JavaScript and the Excalibur game engine that i learned from school.
-                    The engine provided a solid foundation for developing platform mechanics and handling collision detection.
+                    For this project, I used JavaScript and the Excalibur game engine that I learned at school.
+                    The engine helped me build the jumping and moving parts of the game. It also made it easier
+                    to check when Kribo hits something (like walls or enemies).
                 </p>
                 <p>
-                    The graphics, including Kribo, the shadow, and the stars, were designed and drawn by me on my phone.
-                    This gave me the freedom to match the visual style perfectly with the atmosphere I wanted to create.
-                    Plus, i also love drawing in pixel style, so it was a fun way to express my creativity while working on the game.
+                    I drew all the graphics myself on my phone. This includes Kribo (the main character),
+                    the shadow, and the stars. I like drawing in pixel style, so this was a fun way to be creative
+                    while making the game. I wanted the game to look how I imagined it.
                 </p>
                 <p>
-                    The concept originated during design classes, where we had to create a guide for our own game.
-                    This process helped me approach the design in a structured way and properly work out the mechanics.
+                    The idea for the game came from design class. We had to make a guide for our own game.
+                    This helped me think about the game in a clear way. I planned how it should work and
+                    what the player would do. I also made sure the controls felt good and the game was fair.
                 </p>
                 <p>
-                    In the future, I would love to expand this concept further. I've already thought out a storyline
-                    and have ideas for how the levels should look. I also want to add more variety in enemies and power-ups.
-                    But that's for later, when I have gained more experience in game development.
+                    In the future, I want to make this game bigger. I already have a story in my head and
+                    ideas for new levels. I also want to add more enemies and power-ups to make it more fun.
+                    But I need more experience first. I want to learn more about game making before I start
+                    adding all these new things.
                 </p>
             </>
         ),

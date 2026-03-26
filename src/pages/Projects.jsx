@@ -5,35 +5,35 @@ export default function Projects() {
         {
             id: "the-bizarre-kribo-adventure",
             title: "The Bizarre Kribo Adventure",
-            description: "An raging game with obstacles and gameplay mechanics.",
+            description: "A hard platform game where you need to be careful and keep trying. Every jump matters!",
             image: "/src/images/ScreenshotKriboGame.png",
             live: "https://shav0nne.github.io/The_Bizzare_Kribo_Adventure/"
         },
         {
             id: "planet-keeper",
             title: "Planet Keeper",
-            description: "A world focused game on environmental awareness through interactive gameplay.",
+            description: "A team project about taking care of the environment. Make choices that help your planet.",
             image: "/src/images/ScreenshotPlanetKeeper.png",
             live: "https://planet-keeper.itch.io/planet-keeper"
         },
         {
             id: "kingdom-hearts-guide",
             title: "Kingdom Hearts Guide Website",
-            description: "A comprehensive guide website for Kingdom Hearts game mechanics and strategies.",
+            description: "A guide website with tips for Kingdom Hearts. Learn about forms, bosses, and enemies.",
             image: "/src/images/KingdomHeartsGuide.png",
             live: "https://github.com/Shav0nne/kingdom-hearts-guides"
         },
         {
             id: "poppy",
             title: "Poppy",
-            description: "A creative project exploring unique game mechanics and visual storytelling.",
+            description: "A music app with AI that recommends songs. Made with Express.js and MongoDB.",
             image: "/src/images/Poppy.png",
             live: "http://145.24.237.244"
         },
         {
             id: "trippie",
             title: "Trippie",
-            description: "An experimental project combining music visualization with interactive elements.",
+            description: "A travel app that helps people use public transport. Made for people who need extra help.",
             image: "/src/images/Trippie.png",
             live: "https://project.cmi.hr.nl/2024_2025/cle3_t10/trippie/"
         }

@@ -100,14 +100,14 @@ export default function Poppy() {
         ],
         additionalImages: [
             {
-                src: "/src/images/PoppyERD.png",
+                src: "/src/images/PoppyERD.jpg",
                 alt: "ERD diagram for database",
                 caption: "ERD diagram I helped design for the database"
             },
             {
                 src: "/src/images/PoppyFriendSystem.png",
                 alt: "Friend system interface",
-                caption: "Friend system with requests and blocking"
+                caption: "Friend system with requests"
             }
         ]
     };

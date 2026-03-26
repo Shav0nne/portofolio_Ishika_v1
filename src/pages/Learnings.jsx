@@ -28,7 +28,7 @@ export default function Learnings() {
             name: "Game Development",
             description: "Excalibur engine and game mechanics",
             icon: "/src/images/tech/excalibur.png",
-            level: "Learning"
+            level: "Beginner"
         },
         {
             name: "UI/UX Design",
@@ -40,13 +40,13 @@ export default function Learnings() {
             name: "Web & Graphic Design",
             description: "Creating visuals with Canva",
             icon: "/src/images/tech/canva.png",
-            level: "Proficient"
+            level: "Intermediate"
         },
         {
             name: "Git & GitHub",
             description: "Version control and collaboration",
             icon: "/src/images/tech/github.png",
-            level: "Proficient"
+            level: "Intermediate"
         }
     ];
     const softSkills = [
@@ -60,19 +60,19 @@ export default function Learnings() {
 
     const learningGoals = [
         {
-            title: "Master React & Modern JavaScript",
+            title: "Master react and modern javascript",
             description: "Deepen my knowledge of React hooks, state management, and modern JavaScript features to build more complex and interactive applications"
         },
         {
-            title: "Improve Game Development Skills",
+            title: "Improve game development skills (with other engines)",
             description: "Create a complete game using Unity or Godot, expanding beyond web based game engines and learning professional game development workflows"
         },
         {
-            title: "Build a Full-Stack Application",
+            title: "Build a full-stack application",
             description: "Create a complete project using Laravel backend with React frontend to understand full-stack development and API integration"
         },
         {
-            title: "Contribute to Open Source",
+            title: "Contribute to open source",
             description: "Start contributing to open-source projects to learn from experienced developers and give back to the community"
         }
     ];
@@ -82,7 +82,7 @@ export default function Learnings() {
             <h1 className="text-4xl font-bold text-yellow-400 mb-4">What have I learned</h1>
             <p className="text-gray-300 mb-12 text-lg">My journey through technology and development</p>
 
-            {/* Technical Skills Grid */}
+            {/* Technical skills grid */}
             <div className="mb-16">
                 <h2 className="text-2xl font-bold text-yellow-400 mb-6">Technical Skills</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -90,14 +90,9 @@ export default function Learnings() {
                         <div key={index} className="bg-gray-800 rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
                             <div className="flex justify-center mb-4">
                                 <div className="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center">
-                                    <img
-                                        src={skill.icon}
-                                        alt={skill.name}
-                                        className="w-12 h-12 object-contain"
+                                    <img src={skill.icon} alt={skill.name} className="w-12 h-12 object-contain"
                                         onError={(e) => {
-                                            e.target.src = "https://via.placeholder.com/48?text=Logo";
-                                        }}
-                                    />
+                                            e.target.src = "https://via.placeholder.com/48?text=Logo";}}/>
                                 </div>
                             </div>
                             <h3 className="text-xl font-semibold text-yellow-400 text-center mb-2">{skill.name}</h3>

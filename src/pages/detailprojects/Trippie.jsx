@@ -133,8 +133,8 @@ export default function Trippie() {
             </>
         ),
         techStack: [
-            { name: "HTML", icon: "/src/images/tech/html5.png" },
-            { name: "CSS", icon: "/src/images/tech/css3.png" },
+            { name: "HTML", icon: "/src/images/tech/html.png" },
+            { name: "CSS", icon: "/src/images/tech/css.png" },
             { name: "JavaScript", icon: "/src/images/tech/javascript.png" },
             { name: "Google Maps API", icon: "/src/images/tech/googlemaps.png" },
             { name: "NS API", icon: "/src/images/tech/ns.png" }

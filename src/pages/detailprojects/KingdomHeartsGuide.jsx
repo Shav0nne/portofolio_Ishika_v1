@@ -9,49 +9,44 @@ export default function KingdomHeartsGuide() {
         description: (
             <>
                 <p>
-                    The Kingdom Hearts Guide Website is a comprehensive resource for players looking to
-                    master the complex mechanics of the Kingdom Hearts series. This guide covers everything
-                    from basic controls to advanced strategies for boss fights.
+                    The Kingdom Hearts Guide Website helps players learn how to play the Kingdom Hearts games.
+                    It shows you the basics and gives tips for harder parts of the game.
                 </p>
                 <p>
-                    The website features detailed guides for Valor Form, detailed boss strategies for
-                    challenging encounters like Axel, and information about common Heartless. Each
-                    guide is written to be accessible for new players while providing valuable insights
-                    for experienced fans.
+                    The website has guides for Valor Form (a special power), tips for fighting tough bosses
+                    like Axel, and information about common enemies called Heartless. Everything is written
+                    in a way that is easy to understand for new players.
                 </p>
                 <p>
-                    I created this project to combine my love for the Kingdom Hearts series with my web
-                    development skills. The responsive design ensures the guides are readable on any
-                    device, making it easy to reference while playing.
+                    I made this project because I love Kingdom Hearts and wanted to practice my web building
+                    skills. The website works on phones, tablets, and computers, so you can check it while
+                    you play.
                 </p>
             </>
         ),
         development: (
             <>
                 <p>
-                    For this project, I used the Laravel framework to build a web application.
-                    Laravel provided an excellent structure for organizing the code, handling routing, and managing
-                    the database interactions efficiently.
+                    For this project, I used Laravel to build the website. Laravel helped me organize my code
+                    and connect to the database.
                 </p>
                 <p>
-                    The backend is built with PHP, utilizing Laravel's elegant syntax and powerful features like
-                    Eloquent ORM for database operations. I used SQLite as the database to store all the guide
-                    content, user data, and game information.
+                    The back-end (the part that stores data) is made with PHP. I used SQLite to store all the
+                    guide information in a database.
                 </p>
                 <p>
-                    The frontend was developed using HTML and CSS, with Blade templates for dynamic content
-                    rendering. Laravel's Blade templating engine made it easy to create reusable components and
-                    maintain a consistent layout throughout the website.
+                    The front-end (what you see on the screen) is made with HTML and CSS. I used Blade templates
+                    (a Laravel tool) to put the guide content on the pages.
                 </p>
                 <p>
-                    One of the main challenges was organizing the large amount of game data in a user friendly way.
-                    I solved this by creating a categorization system with Eloquent relationships and implementing
-                    a search feature using Laravel Scout, making it easy for users to find specific information quickly.
+                    The hardest part was putting all the game information in a way that is easy for users to find.
+                    I fixed this by making categories for different topics. I also added a search bar so users
+                    can quickly find what they need.
                 </p>
                 <p>
-                    The project helped me deepen my understanding of MVC architecture, database relationships,
-                    and how to build a complete content management system using Laravel. In the future, I plan to
-                    add more game guides and implement user authentication so players can save their favorite guides.
+                    This project helped me learn more about how websites are built, how databases work, and how to
+                    organize information. In the future, I want to add more game guides and let users make accounts
+                    so they can save their favorite guides.
                 </p>
             </>
         ),
