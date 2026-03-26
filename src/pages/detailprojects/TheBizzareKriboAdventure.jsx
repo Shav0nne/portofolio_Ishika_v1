@@ -66,9 +66,9 @@ export default function TheBizzareKriboAdventure() {
                 caption: "Character designs"
             },
             {
-                src: "/src/images/KriboEndScreen.jpeg",
-                alt: "Screenshot of the end screen of the game",
-                caption: "End screen with highscore"
+                src: "/src/images/ScreenshotKriboGame.png",
+                alt: "Screenshot of the game showing the main character Kribo in action",
+                caption: "In-game screenshot"
             }
         ]
     };

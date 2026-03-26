@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import TheBizzareKriboAdventure from "./pages/detailprojects/TheBizzareKriboAdventure";
 // import PlanetKeeper from "./pages/detailprojects/PlanetKeeper";
-// import KingdomHeartsGuide from "./pages/detailprojects/KingdomHeartsGuide";
+import KingdomHeartsGuide from "./pages/detailprojects/KingdomHeartsGuide";
 // import Poppy from "./pages/detailprojects/Poppy";
 // import Trippie from "./pages/detailprojects/Trippie";
 import Learnings from "./pages/Learnings";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             { path: "projects", element: <Projects /> },
             { path: "projects/the-bizarre-kribo-adventure", element: <TheBizzareKriboAdventure /> },
             // { path: "projects/planet-keeper", element: <PlanetKeeper /> },
-            // { path: "projects/kingdom-hearts-guide", element: <KingdomHeartsGuide /> },
+            { path: "projects/kingdom-hearts-guide", element: <KingdomHeartsGuide /> },
             // { path: "projects/poppy", element: <Poppy /> },
             // { path: "projects/trippie", element: <Trippie /> },
             { path: "learnings", element: <Learnings /> },
