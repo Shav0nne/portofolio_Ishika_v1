@@ -1,16 +1,18 @@
 import { FadeInSection, FadeInScale } from "../components/Animations";
 import { images } from '../utils/images';
+import { useLanguage } from '../context/Language';
 
 export default function Contact() {
+    const { language, t } = useLanguage();
+
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
             {/* Header Section */}
             <FadeInSection delay={100}>
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-yellow-400 mb-4">Let's Connect!</h1>
+                    <h1 className="text-4xl font-bold text-yellow-400 mb-4">{t('contactTitle')}</h1>
                     <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                        Have a question, a project idea, or just want to say hi? I'd love to hear from you!
-                        Feel free to reach out through any of the platforms below.
+                        {t('contactText')}
                     </p>
                 </div>
             </FadeInSection>
@@ -32,9 +34,9 @@ export default function Contact() {
                             </div>
                         </div>
                         <h2 className="text-2xl font-bold text-yellow-400 mb-2">LinkedIn</h2>
-                        <p className="text-gray-400 mb-4">Connect professionally</p>
+                        <p className="text-gray-400 mb-4">{t('linkedin')}</p>
                         <span className="inline-block text-yellow-400 group-hover:translate-x-1 transition-transform mt-auto">
-                            Connect →
+                            {language === 'en' ? 'Connect →' : 'Verbind →'}
                         </span>
                     </a>
                 </FadeInScale>
@@ -51,9 +53,9 @@ export default function Contact() {
                             </div>
                         </div>
                         <h2 className="text-2xl font-bold text-yellow-400 mb-2">GitHub</h2>
-                        <p className="text-gray-400 mb-4">Check out my code</p>
+                        <p className="text-gray-400 mb-4">{t('github')}</p>
                         <span className="inline-block text-yellow-400 group-hover:translate-x-1 transition-transform mt-auto">
-                            View Projects →
+                            {language === 'en' ? 'View Projects →' : 'Bekijk Projecten →'}
                         </span>
                     </a>
                 </FadeInScale>
@@ -72,9 +74,9 @@ export default function Contact() {
                             </div>
                         </div>
                         <h2 className="text-2xl font-bold text-yellow-400 mb-2">Email</h2>
-                        <p className="text-gray-400 mb-4">Send me a message</p>
+                        <p className="text-gray-400 mb-4">{t('email')}</p>
                         <span className="inline-block text-yellow-400 group-hover:translate-x-1 transition-transform mt-auto">
-                            Send Message →
+                            {language === 'en' ? 'Send Message →' : 'Stuur Bericht →'}
                         </span>
                     </a>
                 </FadeInScale>
@@ -82,21 +84,20 @@ export default function Contact() {
 
             {/* CV Download Section */}
             <FadeInScale delay={650}>
-                <div className="bg-gradient-to-r bg-yellow-400 rounded-2xl p-8 text-center">
+                <div className="bg-yellow-400 rounded-2xl p-8 text-center">
                     <div className="max-w-2xl mx-auto">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Download My CV</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('downloadCV')}</h2>
                         <p className="text-gray-800 mb-6">
-                            Interested in working together? Download my CV to learn more about my experience,
-                            skills, and background. I'm always open to new opportunities and collaborations!
+                            {t('downloadText')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="/cv/ishika-cv-nl.pdf" download
                                className="inline-flex items-center justify-center bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Download CV (NL)
+                                {t('downloadNL')}
                             </a>
                             <a href="/cv/ishika-cv-eng.pdf" download
                                className="inline-flex items-center justify-center bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Download CV (ENG)
+                                {t('downloadEN')}
                             </a>
                         </div>
                     </div>
@@ -107,7 +108,7 @@ export default function Contact() {
             <FadeInSection delay={800}>
                 <div className="mt-12 text-center">
                     <p className="text-gray-500 text-sm">
-                        Usually respond within 24 hours
+                        {t('respondTime')}
                     </p>
                 </div>
             </FadeInSection>

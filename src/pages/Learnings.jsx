@@ -1,58 +1,78 @@
 import { FadeInSection, FadeInLeft, FadeInRight, FadeInScale } from "../components/Animations";
 import { images } from '../utils/images';
+import { useLanguage } from '../context/Language';
 
 export default function Learnings() {
+    const { language, t } = useLanguage();
+
     const skills = [
         {
             name: "HTML & CSS",
-            description: "Responsive layout and modern web design",
+            descriptionEn: "Responsive layout and modern web design",
+            descriptionNl: "Responsieve layout en modern webdesign",
             icon: images.tech.html,
-            level: "Advanced"
+            levelEn: "Advanced",
+            levelNl: "Gevorderd"
         },
         {
             name: "PHP",
-            description: "Backend development basics",
+            descriptionEn: "Backend development basics",
+            descriptionNl: "Basis backend ontwikkeling",
             icon: images.tech.php,
-            level: "Intermediate"
+            levelEn: "Intermediate",
+            levelNl: "Gemiddeld"
         },
         {
             name: "Laravel / Herd",
-            description: "Framework structure and backend architecture",
+            descriptionEn: "Framework structure and backend architecture",
+            descriptionNl: "Framework structuur en backend architectuur",
             icon: images.tech.laravel,
-            level: "Intermediate"
+            levelEn: "Intermediate",
+            levelNl: "Gemiddeld"
         },
         {
             name: "JavaScript",
-            description: "Building interactive web applications",
+            descriptionEn: "Building interactive web applications",
+            descriptionNl: "Bouwen van interactieve webapplicaties",
             icon: images.tech.javascript,
-            level: "Growing"
+            levelEn: "Growing",
+            levelNl: "Groeien"
         },
         {
             name: "Game Development",
-            description: "Excalibur engine and game mechanics",
+            descriptionEn: "Excalibur engine and game mechanics",
+            descriptionNl: "Excalibur engine en spelmechanieken",
             icon: images.tech.excalibur,
-            level: "Beginner"
+            levelEn: "Beginner",
+            levelNl: "Beginner"
         },
         {
             name: "UI/UX Design",
-            description: "Wireframing and prototyping in Figma",
+            descriptionEn: "Wireframing and prototyping in Figma",
+            descriptionNl: "Wireframing en prototypen in Figma",
             icon: images.tech.figma,
-            level: "Intermediate"
+            levelEn: "Intermediate",
+            levelNl: "Gemiddeld"
         },
         {
             name: "Web & Graphic Design",
-            description: "Creating visuals with Canva",
+            descriptionEn: "Creating visuals with Canva",
+            descriptionNl: "Visuele ontwerpen maken met Canva",
             icon: images.tech.canva,
-            level: "Intermediate"
+            levelEn: "Intermediate",
+            levelNl: "Gemiddeld"
         },
         {
             name: "Git & GitHub",
-            description: "Version control and collaboration",
+            descriptionEn: "Version control and collaboration",
+            descriptionNl: "Versiebeheer en samenwerking",
             icon: images.tech.git,
-            level: "Intermediate"
+            levelEn: "Intermediate",
+            levelNl: "Gemiddeld"
         }
     ];
-    const softSkills = [
+
+    const softSkillsEn = [
         "Creative thinking and solution thinker",
         "Can work in a team or alone",
         "Friendly, helpful and open to learn more",
@@ -61,7 +81,16 @@ export default function Learnings() {
         "Has a driver's license B"
     ];
 
-    const learningGoals = [
+    const softSkillsNl = [
+        "Creatief denker en probleemoplosser",
+        "Kan in team of alleen werken",
+        "Vriendelijk, behulpzaam en sta open om te leren",
+        "Goed in het maken van plannen",
+        "Altijd op tijd en aanwezig",
+        "Heeft rijbewijs B"
+    ];
+
+    const learningGoalsEn = [
         {
             title: "Master react and modern javascript",
             description: "Deepen my knowledge of React hooks, state management, and modern JavaScript features to build more complex and interactive applications"
@@ -80,17 +109,51 @@ export default function Learnings() {
         }
     ];
 
+    const learningGoalsNl = [
+        {
+            title: "React en moderne JavaScript onder de knie krijgen",
+            description: "Mijn kennis verdiepen van React hooks, state management en moderne JavaScript functies om complexere en interactievere applicaties te bouwen"
+        },
+        {
+            title: "Game development vaardigheden verbeteren (met andere engines)",
+            description: "Een complete game maken met Unity of Godot, verder gaan dan web-gebaseerde game engines en professionele game development workflows leren"
+        },
+        {
+            title: "Een full-stack applicatie bouwen",
+            description: "Een compleet project maken met Laravel backend en React frontend om full-stack ontwikkeling en API integratie te begrijpen"
+        },
+        {
+            title: "Bijdragen aan open source",
+            description: "Beginnen met bijdragen aan open-source projecten om te leren van ervaren developers en iets terug te geven aan de community"
+        }
+    ];
+
+    const getLevelText = (levelEn, levelNl) => {
+        return language === 'en' ? levelEn : levelNl;
+    };
+
+    const getLevelColor = (level) => {
+        const levelEn = typeof level === 'object' ? level.en : level;
+        switch(levelEn) {
+            case 'Advanced': return 'bg-green-900 text-green-300';
+            case 'Proficient': return 'bg-blue-900 text-blue-300';
+            case 'Intermediate': return 'bg-yellow-900 text-yellow-300';
+            case 'Growing': return 'bg-purple-900 text-purple-300';
+            default: return 'bg-gray-700 text-gray-300';
+        }
+    };
+
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
             <FadeInSection delay={100}>
-                <h1 className="text-4xl font-bold text-yellow-400 mb-4">What have I learned</h1>
-                <p className="text-gray-300 mb-12 text-lg">My journey through technology and development</p>
+                <h1 className="text-4xl font-bold text-yellow-400 mb-4">{t('learningsTitle')}</h1>
+                <p className="text-gray-300 mb-12 text-lg">{t('learningsSubtitle')}</p>
             </FadeInSection>
 
             {/* Technical skills grid */}
             <div className="mb-16">
                 <FadeInLeft delay={200}>
-                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">Technical Skills</h2>
+                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">{t('technicalSkills')}</h2>
                 </FadeInLeft>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {skills.map((skill, index) => (
@@ -104,15 +167,12 @@ export default function Learnings() {
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-semibold text-yellow-400 text-center mb-2">{skill.name}</h3>
-                                <p className="text-gray-400 text-sm text-center mb-2">{skill.description}</p>
+                                <p className="text-gray-400 text-sm text-center mb-2">
+                                    {language === 'en' ? skill.descriptionEn : skill.descriptionNl}
+                                </p>
                                 <div className="mt-3 text-center">
-                                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium
-                                        ${skill.level === 'Advanced' ? 'bg-green-900 text-green-300' :
-                                        skill.level === 'Proficient' ? 'bg-blue-900 text-blue-300' :
-                                            skill.level === 'Intermediate' ? 'bg-yellow-900 text-yellow-300' :
-                                                skill.level === 'Growing' ? 'bg-purple-900 text-purple-300' :
-                                                    'bg-gray-700 text-gray-300'}`}>
-                                        {skill.level}
+                                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${getLevelColor(skill.levelEn)}`}>
+                                        {getLevelText(skill.levelEn, skill.levelNl)}
                                     </span>
                                 </div>
                             </div>
@@ -124,16 +184,14 @@ export default function Learnings() {
             {/* Soft skills */}
             <div className="mb-16">
                 <FadeInRight delay={400}>
-                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">Soft Skills & Qualities</h2>
+                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">{t('softSkills')}</h2>
                 </FadeInRight>
                 <FadeInScale delay={500}>
                     <div className="bg-gray-800 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {softSkills.map((skill, index) => (
+                            {(language === 'en' ? softSkillsEn : softSkillsNl).map((skill, index) => (
                                 <div key={index} className="flex items-center space-x-3">
-                                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
+                                    <span className="text-yellow-400 text-lg">✓</span>
                                     <span className="text-gray-300">{skill}</span>
                                 </div>
                             ))}
@@ -145,10 +203,10 @@ export default function Learnings() {
             {/* Personal learning goals */}
             <div>
                 <FadeInLeft delay={600}>
-                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">My Learning Goals</h2>
+                    <h2 className="text-2xl font-bold text-yellow-400 mb-6">{t('learningGoals')}</h2>
                 </FadeInLeft>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {learningGoals.map((goal, index) => (
+                    {(language === 'en' ? learningGoalsEn : learningGoalsNl).map((goal, index) => (
                         <FadeInScale key={index} delay={700 + (index * 100)}>
                             <div className="bg-gray-800 rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
                                 <h3 className="text-xl font-semibold text-yellow-400 mb-3">{goal.title}</h3>
