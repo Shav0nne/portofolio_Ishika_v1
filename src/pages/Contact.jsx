@@ -91,11 +91,11 @@ export default function Contact() {
                             {t('downloadText')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/cv/ishika-cv-nl.pdf" download
+                            <a href="/cv/Ishika_Soebhag_CV_NL.pdf" download
                                className="inline-flex items-center justify-center bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                                 {t('downloadNL')}
                             </a>
-                            <a href="/cv/ishika-cv-eng.pdf" download
+                            <a href="/cv/Ishika_Soebhag_CV_ENG.pdf" download
                                className="inline-flex items-center justify-center bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                                 {t('downloadEN')}
                             </a>
